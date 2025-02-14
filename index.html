@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Living Together Countdown</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div class="page-header">
+      <h1>
+        <span class="raised-word">Let's</span>
+        <span class="raised-word">Live</span>
+        <span class="raised-word">Together!</span>
+      </h1>
+    </div>
+
+    <div class="div-centered">
+      <div id="countdown">00:00:00:00:00</div>
+
+      <div class="progress-wrapper">
+        <div class="progress-container">
+          <div class="image-container">
+            <img
+              src="assets/walking-barry.gif"
+              id="img-left"
+              class="progress-img"
+            />
+            <img
+              src="assets/jumping-mari.gif"
+              id="img-right"
+              class="progress-img"
+            />
+          </div>
+
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function formatTime(unit) {
+        return unit < 10 ? "0" + unit : unit;
+      }
+
+      function updateCountdown() {
+        const targetDate = new Date("July 15, 2025 00:00:00").getTime();
+        const now = new Date().getTime();
+        const timeLeft = targetDate - now;
+
+        if (timeLeft < 0) {
+          document.getElementById("countdown").innerText = "00:00:00:00:00";
+          return;
+        }
+
+        const months = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 30));
+        const days = Math.floor(
+          (timeLeft % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
+        );
+        const hours = Math.floor(
+          (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerText = `${formatTime(
+          months
+        )}:${formatTime(days)}:${formatTime(hours)}:${formatTime(
+          minutes
+        )}:${formatTime(seconds)}`;
+      }
+
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+    </script>
+  </body>
+</html>

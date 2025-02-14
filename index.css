@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
+
+.div-class {
+  margin-bottom: 20px;
+}
+
+/*colors*/
+:root {
+  --peach: #ffb688;
+  --tan: #d2a077;
+  --espresso: #59443d;
+  --lightbrown: #b59071;
+}
+
+body {
+  background-color: var(--lightbrown);
+  text-align: center;
+  padding: 20px 0;
+}
+
+/*text styles*/
+h1 {
+  color: var(--espresso);
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  margin: 0;
+}
+
+#countdown {
+  font-family: "Pixelify Sans", sans-serif;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #59443d;
+  padding-bottom: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+#countdown:hover {
+  transform: translateY(-5px);
+}
+
+
+.page-header {
+  text-align: center;
+  border: 5px solid #59443d;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: beige;
+}
+
+.div-centered {
+  text-align: center;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 5px solid var(--espresso);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  background-color: beige;
+}
+
+.progress-wrapper {
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-container {
+  position: relative;
+  width: 80%;
+  height: 40px;
+  background: #f4baba;
+  margin: auto;
+  border: 3px solid var(--espresso);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 80%;
+  background: #ff5733;
+  transition: width 1s linear;
+  overflow: hidden;
+  box-shadow: 0 0 0 2px black, 2px 2px 0 2px black, -2px -2px 0 2px black;
+}
+
+.image-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.progress-img {
+  position: absolute;
+  transition: left 1s linear;
+}
+
+.progress-img:hover {
+  transform: scale(1.2);
+}
+
+.raised-word {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.raised-word:hover {
+  transform: translateY(-5px);
+}
+
+#img-left {
+  left: 0;
+}
+
+#img-right {
+  right: 0;
+  margin-top:-3px;
+}
