@@ -10,12 +10,16 @@
   --tan: #d2a077;
   --espresso: #59443d;
   --lightbrown: #b59071;
+  --pink: #f4baba;
 }
 
 body {
   background-color: var(--lightbrown);
   text-align: center;
   padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*text styles*/
@@ -44,7 +48,6 @@ h1 {
   transform: translateY(-5px);
 }
 
-
 .page-header {
   text-align: center;
   border: 5px solid #59443d;
@@ -57,11 +60,10 @@ h1 {
 
 .div-centered {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
   width: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
   border: 5px solid var(--espresso);
   padding-top: 30px;
   padding-bottom: 30px;
@@ -70,7 +72,6 @@ h1 {
 }
 
 .progress-wrapper {
-  position: absolute;
   flex-direction: column;
   align-items: center;
   margin-top: auto;
@@ -86,6 +87,7 @@ h1 {
   margin: auto;
   border: 3px solid var(--espresso);
   overflow: hidden;
+  display: flex;
 }
 
 .progress-bar {
@@ -122,11 +124,123 @@ h1 {
   transform: translateY(-5px);
 }
 
+#endDate, #startButton, .input-style {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 1rem;
+  padding: 5px;
+  border: 2px solid var(--espresso);
+  border-radius: 5px;
+  background-color: beige;
+  color: var(--espresso);
+  margin-top: 1%;
+}
+
+#endDate:hover {
+  cursor: pointer;
+}
+
+#startButton:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 #img-left {
-  left: 0;
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 30px;
 }
 
 #img-right {
+  position: absolute;
+  left: 0;
+  top:10%;
+  height: 30px;
+}
+
+#barry-progress-bar, #mari-progress-bar {
+  width:50%;
+  height: 100%;
+  background-color: #f4baba;
+  position: relative;
+}
+
+#barry-bar {
+  width: 20%;
+  height: 100%;
+  background-color: #f4baba;
+  position: relative;
+  overflow: visible;
+}
+
+#mari-bar {
+  width: 20%;
+  height: 100%;
   right: 0;
-  margin-top:-3px;
+  background-color: #f4baba;
+  position: absolute;
+  overflow: visible;
+  direction: rtl;
+}
+
+.flatpickr-calendar {
+  background-color: beige !important;
+  color: var(--espresso);
+  border: 3px solid var(--espresso);
+  box-shadow: none;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.flatpickr-months .flatpickr-month {
+  background-color: var(--espresso) !important;
+  color: white !important;
+}
+
+.flatpickr-monthDropdown-months {
+  background-color: var(--espresso) !important;
+  color: white !important;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.flatpickr-day:hover {
+  background-color: #f4baba !important;
+  border-color: solid 1px var(--espresso) !important;
+  color: white;
+}
+
+.flatpickr-day.today {
+  border-color: solid 1px var(--espresso) !important;
+}
+
+.flatpickr-time {
+  background-color: beige !important;
+  border-top: 3px solid var(--espresso) !important;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.flatpickr-time-separator {
+  color: var(--espresso);
+}
+
+.flatpickr-time .numInputWrapper input:hover {
+  background-color: var(--beige) !important;
+}
+
+.flatpickr-time .numInputWrapper input {
+  background-color: beige !important;
+  color: var(--espresso);
+  background-color: beige;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.flatpickr-am-pm {
+  background-color: beige !important;
+  color: var(--espresso);
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.flatpickr-time .flatpickr-am-pm:hover {
+  background-color: beige !important;
+  color: var(--espresso);
+  font-family: "Pixelify Sans", sans-serif;
 }
